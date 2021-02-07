@@ -645,7 +645,7 @@ namespace Avalonia.ExtendedToolkit.Controls
             BreadcrumbItem breadcrumbItem = Content as BreadcrumbItem;
 
             _isInitial = true;
-            RaisePropertyChanged(RootProperty, null, breadcrumbItem.Items);
+            RaisePropertyChanged(RootProperty, null, new BindingValue<object>( breadcrumbItem.Items));
             _isInitial = false;
 
             //RaisePropertyChanged(PathProperty, string.Empty, Path);

@@ -31,8 +31,8 @@
   <StyleInclude Source="avares://Avalonia.ExtendedToolkit/Styles/DefaultControls/Controls.Slider.xaml"/>
   <StyleInclude Source="avares://Avalonia.ExtendedToolkit/Styles/DefaultControls/Controls.SliderEx.xaml"/>
   <StyleInclude Source="avares://Avalonia.ExtendedToolkit/Styles/DefaultControls/Controls.StatusBar.xaml"/>
-  <StyleInclude Source="avares://Avalonia.ExtendedToolkit/Styles/DefaultControls/Controls.TabControl.xaml"/>
-  <StyleInclude Source="avares://Avalonia.ExtendedToolkit/Styles/DefaultControls/Controls.TabItem.xaml"/>
+  <!--<StyleInclude Source="avares://Avalonia.ExtendedToolkit/Styles/DefaultControls/Controls.TabControl.xaml"/>
+  <StyleInclude Source="avares://Avalonia.ExtendedToolkit/Styles/DefaultControls/Controls.TabItem.xaml"/>-->
   <StyleInclude Source="avares://Avalonia.ExtendedToolkit/Styles/DefaultControls/Controls.TextBox.xaml"/>
   <StyleInclude Source="avares://Avalonia.ExtendedToolkit/Styles/DefaultControls/Controls.TextBlock.xaml"/>
   <StyleInclude Source="avares://Avalonia.ExtendedToolkit/Styles/DefaultControls/Controls.ToolTip.xaml"/>

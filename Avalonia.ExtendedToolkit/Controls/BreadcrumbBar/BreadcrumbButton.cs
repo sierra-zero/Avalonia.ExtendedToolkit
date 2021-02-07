@@ -299,7 +299,7 @@ namespace Avalonia.ExtendedToolkit.Controls
 
             base.OnTemplateApplied(e);
 
-            RaisePropertyChanged(ItemsProperty, null, (IEnumerable)Items);
+            RaisePropertyChanged(ItemsProperty, null, new Data.BindingValue<IEnumerable>(Items));
         }
 
         private void dropDownBtn_MouseDown(object sender, EventArgs e)

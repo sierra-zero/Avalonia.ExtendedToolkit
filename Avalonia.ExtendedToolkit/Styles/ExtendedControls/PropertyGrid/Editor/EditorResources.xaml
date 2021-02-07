@@ -8,6 +8,7 @@
     xmlns:design="clr-namespace:Avalonia.ExtendedToolkit.Controls.PropertyGrid.Design;assembly=Avalonia.ExtendedToolkit"
     xmlns:pgControls="clr-namespace:Avalonia.ExtendedToolkit.Controls.PropertyGrid.Controls;assembly=Avalonia.ExtendedToolkit"
     xmlns:converter="clr-namespace:Avalonia.ExtendedToolkit.Controls.PropertyGrid.Converters;assembly=Avalonia.ExtendedToolkit"
+    xmlns:tkExtensions="clr-namespace:Avalonia.ExtendedToolkit.Extensions;assembly=Avalonia.ExtendedToolkit"
     xmlns:controlz="clr-namespace:Avalonia.Controlz.Controls;assembly=Avalonia.Controlz"
     >
   <Styles.Resources>
@@ -79,7 +80,7 @@
       <ComboBox x:Name="PART_editor"
         DataContext="{Binding PropertyValue}"
         SelectedItem="{Binding Value}"
-        Items="{Binding Source={x:Static FontFamily.SystemFontFamilies}}"
+        Items="{Binding Source={x:Static tkExtensions:FontFamilyExtensions.InstalledFontFamilies}}"
         IsEnabled="{Binding IsEditable}">
         <ComboBox.ItemTemplate>
           <DataTemplate>

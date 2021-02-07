@@ -31,11 +31,12 @@ namespace Avalonia.ExtendedToolkit.Controls.PropertyGrid.Editors
         public object InlineTemplate
         {
             get { return (object)GetValue(InlineTemplateProperty); }
-            set {
+            set
+            {
                 if (value == null)
                     return;
 
-                if(value is string|| value is ControlTemplate)
+                if (value is string || value is ControlTemplate)
                 {
                     SetValue(InlineTemplateProperty, value);
                 }
@@ -97,7 +98,8 @@ namespace Avalonia.ExtendedToolkit.Controls.PropertyGrid.Editors
                         .FirstOrDefault(styleInclude => styleInclude.
                              Source.AbsoluteUri.EndsWith("PropertyGrid/Editor/EditorResources.xaml"));
 
-                result.Loaded.TryGetResource(template, out object resourceValue);
+                object resourceValue = null;
+                (result.Loaded as Styles)?.TryGetResource(template, out resourceValue);
 
                 ControlTemplate controlTemplate = resourceValue as ControlTemplate;
 
@@ -159,7 +161,7 @@ namespace Avalonia.ExtendedToolkit.Controls.PropertyGrid.Editors
         {
             editor.OnTemplateChanged(e);
 
-            if(editor.Parent!=null)
+            if (editor.Parent != null)
             {
 
             }

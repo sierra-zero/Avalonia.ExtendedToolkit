@@ -56,11 +56,13 @@ namespace Avalonia.ExtendedToolkit.Controls
         /// Defines the StepIndex property.
         /// </summary>
         public static readonly StyledProperty<int> StepIndexProperty =
-        AvaloniaProperty.Register<StepBar, int>(nameof(StepIndex), defaultValue: 0,
-        validate: (o, e) => { return CoerceStepIndex(o, e); });
+        AvaloniaProperty.Register<StepBar, int>(nameof(StepIndex), defaultValue: 0
+            , coerce: (o, e) => { return CoerceStepIndex(o, e); });
 
-        private static int CoerceStepIndex(StepBar stepBar, int stepIndex)
+        private static int CoerceStepIndex(IAvaloniaObject o, int stepIndex)
         {
+            StepBar stepBar = o as StepBar;
+
             int itemsCount = stepBar.Items.OfType<object>().Count();
 
             if (itemsCount == 0 && stepIndex > 0)

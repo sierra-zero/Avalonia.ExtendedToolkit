@@ -80,17 +80,17 @@ namespace Avalonia.ExtendedToolkit.Controls
         /// <summary>
         /// Defines the <see cref="AlphaValue"/> direct property.
         /// </summary>
-        public static readonly DirectProperty<ColorSelector, uint> AlphaValueProperty =
-                AvaloniaProperty.RegisterDirect<ColorSelector, uint>(
+        public static readonly DirectProperty<ColorSelector, string> AlphaValueProperty =
+                AvaloniaProperty.RegisterDirect<ColorSelector, string>(
                     nameof(AlphaValue),
                     o => o.AlphaValue);
 
-        private uint _alphaValue;
+        private string _alphaValue;
 
         /// <summary>
         /// Gets or sets AlphaValue.
         /// </summary>
-        public uint AlphaValue
+        public string AlphaValue
         {
             get { return _alphaValue; }
             set
@@ -104,17 +104,17 @@ namespace Avalonia.ExtendedToolkit.Controls
         /// <summary>
         /// Defines the <see cref="RedValue"/> direct property.
         /// </summary>
-        public static readonly DirectProperty<ColorSelector, uint> RedValueProperty =
-                AvaloniaProperty.RegisterDirect<ColorSelector, uint>(
+        public static readonly DirectProperty<ColorSelector, string> RedValueProperty =
+                AvaloniaProperty.RegisterDirect<ColorSelector, string>(
                     nameof(RedValue),
                     o => o.RedValue);
 
-        private uint _redValue;
+        private string _redValue;
 
         /// <summary>
         /// Gets or sets RedValue.
         /// </summary>
-        public uint RedValue
+        public string RedValue
         {
             get { return _redValue; }
             set
@@ -128,17 +128,17 @@ namespace Avalonia.ExtendedToolkit.Controls
         /// <summary>
         /// Defines the <see cref="GreenValue"/> direct property.
         /// </summary>
-        public static readonly DirectProperty<ColorSelector, uint> GreenValueProperty =
-                AvaloniaProperty.RegisterDirect<ColorSelector, uint>(
+        public static readonly DirectProperty<ColorSelector, string> GreenValueProperty =
+                AvaloniaProperty.RegisterDirect<ColorSelector, string>(
                     nameof(GreenValue),
                     o => o.GreenValue);
 
-        private uint _greenValue;
+        private string _greenValue;
 
         /// <summary>
         /// Gets or sets GreenValue.
         /// </summary>
-        public uint GreenValue
+        public string GreenValue
         {
             get { return _greenValue; }
             set
@@ -152,17 +152,17 @@ namespace Avalonia.ExtendedToolkit.Controls
         /// <summary>
         /// Defines the <see cref="BlueValue"/> direct property.
         /// </summary>
-        public static readonly DirectProperty<ColorSelector, uint> BlueValueProperty =
-                AvaloniaProperty.RegisterDirect<ColorSelector, uint>(
+        public static readonly DirectProperty<ColorSelector, string> BlueValueProperty =
+                AvaloniaProperty.RegisterDirect<ColorSelector, string>(
                     nameof(BlueValue),
                     o => o.BlueValue);
 
-        private uint _blueValue;
+        private string _blueValue;
 
         /// <summary>
         /// Gets or sets BlueValue.
         /// </summary>
-        public uint BlueValue
+        public string BlueValue
         {
             get { return _blueValue; }
             set

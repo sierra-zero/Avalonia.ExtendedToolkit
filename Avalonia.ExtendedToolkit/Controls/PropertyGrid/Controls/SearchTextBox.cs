@@ -251,15 +251,16 @@ namespace Avalonia.ExtendedToolkit.Controls.PropertyGrid.Controls
         /// Called when one or more of the avalonia properties
         /// that exist on the element have had their effective values changed.
         /// </summary>
-        /// <param name="e">Arguments for the associated event.</param>
-        protected override void OnPropertyChanged(AvaloniaPropertyChangedEventArgs e)
+        /// <param name="change">Arguments for the associated event.</param>
+        protected override void OnPropertyChanged<T>(AvaloniaPropertyChangedEventArgs<T> change)
         {
-            if(e.Property== IsVisibleProperty)
+            if (change.Property == IsVisibleProperty)
             {
                 Text = string.Empty;
             }
 
-            base.OnPropertyChanged(e);
+            base.OnPropertyChanged(change);
         }
+
     }
 }

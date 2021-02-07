@@ -364,7 +364,14 @@ namespace Avalonia.ExtendedToolkit.Controls
             if (menuStyle == null)
                 return;
 
-            _menu.Styles.Add(menuStyle);
+            try
+            {
+                _menu.Styles.Add(menuStyle);
+            }
+            catch 
+            { 
+                //already have a parent
+            }
         }
 
         /// <summary>
@@ -438,7 +445,7 @@ namespace Avalonia.ExtendedToolkit.Controls
                 }
                 _menu.Items = list;
             }
-            this.RaisePropertyChanged(MenuStyleProperty, null, (IStyle)MenuStyle);
+            this.RaisePropertyChanged(MenuStyleProperty, null, new Data.BindingValue<IStyle>( MenuStyle));
             //RaisePropertyChanged<IStyle>(MenuStyleProperty, null, MenuStyle);
             //this.OnPropertyChanged<IStyle>(MenuStyleProperty, null, new Data.BindingValue<IStyle>( MenuStyle), Data.BindingPriority.Style);
         }

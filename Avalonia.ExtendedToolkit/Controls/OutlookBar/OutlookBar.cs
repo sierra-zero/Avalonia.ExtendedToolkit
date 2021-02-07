@@ -161,8 +161,8 @@ namespace Avalonia.ExtendedToolkit.Controls
             popup = e.NameScope.Find<Popup>(partPopup);
             if (popup != null)
             {
-                popup.Closed += new EventHandler(OnPopupClosed);
-                popup.Opened += new EventHandler(OnPopupOpened);
+                popup.Closed += OnPopupClosed;
+                popup.Opened += OnPopupOpened;
             }
 
             ToggleButton btn = e.NameScope.Find<ToggleButton>("PART_ToggleButton");
@@ -230,6 +230,8 @@ namespace Avalonia.ExtendedToolkit.Controls
 
             //RaisePropertyChanged(IsOverflowVisibleProperty, !IsOverflowVisible, IsOverflowVisible);
         }
+
+
 
         private void Btn_PointerReleased(object sender, Input.PointerReleasedEventArgs e)
         {

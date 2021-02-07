@@ -55,9 +55,11 @@
                                Text="{TemplateBinding Watermark}"
                                IsVisible="{TemplateBinding Text, Converter={x:Static StringConverters.IsNullOrEmpty}}"/>
                       <!--only set the foreground there not the backgoround otherwise the text 
-                                disappears on light/dark theme switching-->
+                                disappears on light/dark theme switching
+                                Foreground="{TemplateBinding Foreground}"
+                                -->
                        <TextPresenter Name="PART_TextPresenter"
-                                   Foreground="{TemplateBinding Foreground}"
+                                   
                                    Text="{TemplateBinding Text, Mode=TwoWay}"
                                    CaretIndex="{TemplateBinding CaretIndex}"
                                    SelectionStart="{TemplateBinding SelectionStart}"

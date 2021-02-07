@@ -158,8 +158,14 @@ namespace Avalonia.ExtendedToolkit.Controls
             styles.Remove(item);
 
             ResourceDictionary resources = (item.Loaded as Style).Resources as ResourceDictionary;
+            
+            Color fromColor;
 
-            var fromColor = (Color)item.FindResource(fromColorKey);
+            object resourceResult = null;
+            item.TryGetResource(fromColorKey, out resourceResult);
+
+            fromColor=(Color)resourceResult;
+
 
             resources["MahApps.Colors.White"] = fromColor;
             resources["MahApps.Colors.Flyout"] = fromColor;

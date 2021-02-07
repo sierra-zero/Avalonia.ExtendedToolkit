@@ -454,7 +454,7 @@ namespace Avalonia.ExtendedToolkit.Controls.PropertyGrid
             this.InvalidateMeasure();
             this.InvalidateArrange();
             this.InvalidateVisual();
-            RaisePropertyChanged(LayoutProperty, null, Layout);
+            RaisePropertyChanged(LayoutProperty, null, new Data.BindingValue<IControl>(Layout));
             DoReload();
         }
 

@@ -1,10 +1,5 @@
 ﻿using System;
 using System.Linq;
-using Avalonia.ExampleApp.ViewModels;
-using Avalonia.ExampleApp.Views;
-using Avalonia.ExtendedToolkit;
-using Avalonia.ExtendedToolkit.Controls;
-using Avalonia.Logging.Serilog;
 using Avalonia.ReactiveUI;
 
 namespace Avalonia.ExampleApp
@@ -41,7 +36,7 @@ namespace Avalonia.ExampleApp
                 .UseSkia()
                 .UseReactiveUI()
                 //.UseDataGrid()
-                .LogToDebug();
+                .LogToTrace();
 
 
             return appBuilder;

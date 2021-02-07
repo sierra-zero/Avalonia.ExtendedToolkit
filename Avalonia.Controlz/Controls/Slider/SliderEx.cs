@@ -486,9 +486,9 @@ namespace Avalonia.Controlz.Controls
         /// updates the pseudo classes
         /// </summary>
         /// <param name="e"></param>
-        protected override void OnPropertyChanged(AvaloniaPropertyChangedEventArgs e)
+        protected override void OnPropertyChanged<T>(AvaloniaPropertyChangedEventArgs<T> change)
         {
-            if (e.Property == OrientationProperty && e.NewValue is Orientation newValue)
+            if (change.Property == OrientationProperty && change.NewValue is Orientation newValue)
             {
                 UpdatePseudoClassesForOrientation(newValue);
             }

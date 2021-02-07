@@ -19,11 +19,11 @@ namespace Avalonia.ExampleApp.Model
         public static readonly StyledProperty<Point> EditValueProperty =
             AvaloniaProperty.Register<PointEditor, Point>(nameof(EditValue)
                 , defaultValue: new Point()
-                //, validate: (o, e) => { return OnEditValuePropertyCoerceValue(o, e); }
+                , coerce: (o, e) => { return OnEditValuePropertyCoerceValue(o, e); }
                 , defaultBindingMode: Data.BindingMode.OneWay
                 );
 
-        private static Point OnEditValuePropertyCoerceValue(PointEditor o, Point e)
+        private static Point OnEditValuePropertyCoerceValue(IAvaloniaObject o, Point e)
         {
             return e;
         }

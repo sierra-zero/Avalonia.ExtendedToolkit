@@ -470,22 +470,22 @@ namespace Avalonia.ExtendedToolkit.Controls
         {
             _borderPreview.Background = new SolidColorBrush(CustomColor);
 
-            AlphaValue = CustomColor.A;
+            AlphaValue = CustomColor.A.ToString();
 
             _txtAlpha.Text = CustomColor.A.ToString();
             string alphaHex = CustomColor.A.ToString("X").PadLeft(2, '0');
 
-            RedValue = CustomColor.R;
+            RedValue = CustomColor.R.ToString();
 
             _txtRed.Text = CustomColor.R.ToString();
             string redHex = CustomColor.R.ToString("X").PadLeft(2, '0');
 
-            GreenValue = CustomColor.G;
+            GreenValue = CustomColor.G.ToString();
 
             _txtGreen.Text = CustomColor.G.ToString();
             string greenHex = CustomColor.G.ToString("X").PadLeft(2, '0');
 
-            BlueValue = CustomColor.B;
+            BlueValue = CustomColor.B.ToString();
 
             _txtBlue.Text = CustomColor.B.ToString();
             string blueHex = CustomColor.B.ToString("X").PadLeft(2, '0');
